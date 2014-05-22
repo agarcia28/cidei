@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6{
 	-moz-border-radius: 3px;
 	border-radius: 3px;
 	margin: 0 auto;
-	padding: 5px;
+	padding: 5px 0;
 	text-align: center;
 	width: 250px;
 }
@@ -97,7 +97,7 @@ label{
 	left: 0;
 	top: 0;
 	width: 100%;
-	background-color: rgba(58, 63, 67, 8);
+	background-color: rgba(58, 63, 67, 0.8);
 	padding: 10%;
 
 	-webkit-transform: translateX(100%);
@@ -161,3 +161,79 @@ label{
 }
 */
 
+/*  */
+@media only screen and (max-width: 959px){
+	label{
+		display: none;
+	}
+
+	.container{
+		width: 100%;
+	}
+
+	.portfolio .four.columns{
+		width: 25%;
+	}
+
+	.portfolio > figure:before{
+		content: attr(data-category);
+		font-size: 1em;
+		padding: 8px;
+		width: 100%;
+		color: #fff;
+		display: block;
+		font-weight: bold;
+		text-transform: capitalize;
+		background-color:  rgba(42, 47, 51, 0.8);
+		position: absolute;
+	}
+
+	.portfolio figcaption{
+		position: relative;
+		opacity: 1;
+
+		-webkit-transform: translateX(0%);
+		-moz-transform: translateX(0%);
+		-ms-transform: translateX(0%);
+		transform: translateX(0%);
+
+		background-color: #3a3f43;
+	}
+
+	.portfolio figure:nth-child(odd) figcaption{
+		background-color: #2a2f33;
+	}
+
+	.footer{
+		border-top: 1px solid #ccc;
+		margin-top: 42px;
+		padding: 28px;
+	}
+}
+
+/* Tablet portrait */
+@media only screen and (min-width: 768px) and (max-width: 959px){
+
+}
+
+/* Landscape */
+@media only screen and (min-width: 480px) and (max-width: 767px){
+	.portfolio .four.columns{
+		width: 50%;
+	}
+}
+
+/* Mobile Portrait Size*/
+@media only screen and (max-width: 479px){
+	.container{
+		width: 100%;
+	}
+
+	.portfolio .four.columns{
+		width: 100%;
+	}
+
+	.footer{
+		text-align: center;
+	}
+}
