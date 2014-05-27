@@ -1,4 +1,4 @@
-$(document).ready(function(event){
+$(document).ready(function(){
 	$('.error').hide();
 
 	$('.submit').click(function(event){
