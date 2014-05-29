@@ -43,10 +43,22 @@ $(document).ready(function(){
 	});
 
 	$('.password').focus(function(){
-		$('.userid').focus();
+		var data = $('.userid').val();
+
+		var len = data.length;
+
+		if(len < 1){
+			$('.userid').focus();
+		}
 	});	
 
 	$('.verpassword').focus(function(){
-		$('.userid').focus();
+		var data = $('.userid').val();
+
+		var len = data.length;
+
+		if(len < 1){
+			$('.userid').focus();
+		}
 	});	
 });
