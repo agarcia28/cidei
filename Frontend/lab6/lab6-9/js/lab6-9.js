@@ -13,7 +13,7 @@ $(document).ready(function(){
 		else{
 			$('.result').hide();
 			$('.error').show();
-			$('.error').html('<h1>Ingrese una direccion de correo valida</h1>')
+			$('.error').html('<h1>Ingrese una direccion de correo valida</h1>');
 		}
 		
 		event.preventDefault();
