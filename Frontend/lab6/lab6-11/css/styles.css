@@ -63,6 +63,12 @@ input{
 	border-color: rgba(255, 0, 0, 0.1);
 }
 
+.nid-success, .user-success, .password-success, .conf-password-success, .email-success, .food-success, .pay-success, .city-success{
+	color: green;
+	padding-left: 10px;
+	border-color: rgba(0, 255, 0, 0.1);
+}
+
 .radiobtn{
 	margin-left: 25px;
 	margin-top: 10px;
@@ -97,7 +103,7 @@ input{
 	width: 500px;
 	position: relative;;
 	margin: 10% auto;
-	padding: 5px 20px 13px 20px
+	padding: 5px 20px 13px 20px;
 
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;

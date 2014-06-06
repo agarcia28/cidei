@@ -14,10 +14,12 @@
 						<span class="label">Documento de Identidad</span>
 						<input type="text" id="nid" />
 						<span class="nid-error"></span>
+						<span class="nid-success"></span>
 
 						<span class="label">Nombre(s) y Apellido(s)</span>
 						<input type="text" id="username" />
 						<span class="user-error"></span>
+						<span class="user-success"></span>
 					</div>
 				</fieldset>
 				<fieldset>
@@ -25,6 +27,7 @@
 						<span class="label">Password</span>
 						<input type="password" class="password" name="password" />
 						<span class="password-error"></span>
+						<span class="password-success"></span>
 
 						<span class="label">Confirmar Password</span>
 						<input type="password" class="conf-password" name="conf-password" />
@@ -34,6 +37,7 @@
 						<span class="label">Email</span>
 						<input type="text" class="emailadd" name="emailid" />
 						<span class="email-error"></span>
+						<span class="email-success"></span>
 					</div>
 				</fieldset>
 				<fieldset>
@@ -44,6 +48,7 @@
 						<input type="checkbox" id="coke" name="coke" value=2000 class="chkb">Coca-Cola $2000 <br />
 						<input type="checkbox" id="fries" name="fries" value=3000 class="chkb">Papas Fritas $3000 <br /> 
 						<span class="food-error"></span>
+						<span class="food-success"></span>
 						<span class="food-total"></span>
 					</div>
 				</fieldset>
@@ -53,6 +58,7 @@
 						<input type="radio" name="paymode" class="radiobtn" value="Mastercard" />Master card <br />
 						<input type="radio" name="paymode" class="radiobtn" value="Visacard" />Visa card <br />
 						<span class="pay-error"></span>
+						<span class="pay-success"></span>
 					</div>
 				</fieldset>
 				<fieldset>
@@ -67,6 +73,7 @@
 							<option value="Medellin">Medellin</option>
 						</select><br />
 						<span class="city-error"></span>
+						<span class="city-success"></span>
 					</div>
 				</fieldset>
 				<div id="buttons">
@@ -76,9 +83,7 @@
 		</form>
 
 		<div id="openModal" class="modalDialog">
-			<div>
-				<a href="#close" title="Close" class="close">X</a>
-			</div>
+			
 		</div>
 	</body>
 </html>
