@@ -1,0 +1,14 @@
+/* line 3, ../sass/styles.scss */
+body { background: white; font-color: #333333; width: 960px; }
+/* line 9, ../sass/styles.scss */
+body .color h1 { color: #402626; font-size: 80px; }
+/* line 15, ../sass/styles.scss */
+body .color h2 { color: gray; font-size: 40px; }
+/* line 21, ../sass/styles.scss */
+body .color h3 { color: #404040; font-size: 26.66667px; }
+/* line 27, ../sass/styles.scss */
+body .color h4 { color: #9f2020; font-size: 20px; }
+/* line 33, ../sass/styles.scss */
+body .color h5 { color: #999999; font-size: 16px; }
+/* line 39, ../sass/styles.scss */
+body .color h6 { color: #f6f6f6; font-size: 13.33333px; }

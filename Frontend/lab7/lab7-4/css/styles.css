@@ -1,0 +1,144 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Globales */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #333333;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold; }
+
+/* Header */
+.header {
+  background-color: #3a3f43;
+  border-bottom: 14px;
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  padding: 22px 0; }
+
+.logo {
+  background-color: #515558;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  margin: 0 auto;
+  padding: 5px 0;
+  text-align: center;
+  width: 250px; }
+  .logo h1 {
+    color: white;
+    font-weight: normal;
+    font-family: Arial, sans-serif;
+    margin-bottom: 0; }
+
+/* Navigation */
+.nav-menu, .portfolio > figure.columns {
+  display: none; }
+
+label {
+  color: #3a3f43;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px; }
+
+.nav-menu:checked + label {
+  color: white;
+  background-color: #3a3f43;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px; }
+
+#all:checked ~ .portfolio .all,
+#develop:checked ~ .portfolio .poster,
+#test:checked ~ .portfolio .illustration,
+#languages:checked ~ .portfolio .typography,
+#skills:checked ~ .portfolio .package {
+  display: block; }
+
+/* Portfolio */
+.portfolio {
+  margin-top: 20px; }
+  .portfolio .four.columns {
+    margin-left: 0;
+    margin-right: 0;
+    width: 240px; }
+  .portfolio > figure {
+    position: relative;
+    overflow: hidden; }
+    .portfolio > figure img {
+      display: block;
+      max-width: 100%; }
+  .portfolio figcaption {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: #3a3f43;
+    padding: 10%;
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%);
+    -webkit-transform: all 350ms;
+    -moz-transform: all 350ms;
+    -o-transform: all 350ms;
+    transform: all 350ms; }
+    .portfolio figcaption h4 {
+      color: white; }
+    .portfolio figcaption p {
+      color: white;
+      font-size: 0.9em; }
+
+.portfolio > figure:hover figcaption {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0); }
+
+/* Footer Section */
+.footer {
+  border-top: 1px solid #cccccc;
+  margin-top: 28px;
+  padding: 28px 0; }
