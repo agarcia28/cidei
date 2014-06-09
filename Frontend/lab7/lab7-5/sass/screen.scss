@@ -3,4 +3,127 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-@import "compass/reset";
+@import "compass";
+@import "_variables";
+
+@include global-reset;
+
+/* Globales */
+*{
+	@include box-sizing(border-box);
+}
+
+h1, h2, h3, h4, h5, h6{
+	color: $titles;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: bold;
+}
+
+/* Header */
+
+.header{
+	background-color: $dark_grey_color;
+	border-bottom: 14px;
+	@include box-shadow(0 1px 3px 0 rgba(0, 0, 0, 0.3));
+	padding: 22px 0;
+}
+
+.logo{
+	background-color: $light_dark_grey_color;
+	@include border-radius(3px);
+	margin: 0 auto;
+	padding: 5px 0;
+	text-align: center;
+	width: 250px;
+
+	h1{
+		color: $white_color;
+		font-weight: normal;
+		font-family: Arial, sans-serif;
+		margin-bottom: 0;
+	}
+}
+
+
+
+/* Navigation */
+
+.nav-menu, .portfolio > figure.columns{
+	display: none;
+}
+
+label{
+	color: $dark_grey_color;
+	cursor: pointer;
+	display: inline-block;
+	padding: 5px;
+}
+
+.nav-menu:checked + label{
+	color: $white_color;
+	background-color: $dark_grey_color;
+	@include border-radius(3px);
+}
+
+#all:checked ~ .portfolio .all,
+#develop:checked ~ .portfolio .poster,
+#test:checked ~ .portfolio .illustration,
+#languages:checked ~ .portfolio .typography,
+#skills:checked ~ .portfolio .package{
+	display: block;
+}
+
+/* Portfolio */
+.portfolio{
+	margin-top: 20px;
+
+	.four.columns{
+		margin-left: 0;
+		margin-right: 0;
+		width: 240px;
+	}
+
+	> figure{
+		position: relative;
+		overflow: hidden;
+
+		img{
+			display: block;
+			max-width: 100%;
+		}
+	}
+
+	figcaption{
+		position: absolute;
+		height: 100%;
+		left: 0;
+		top: 0;
+		width: 100%;
+		background-color: $dark_grey_color;
+		padding: 10%;
+
+		@include translateX(100%);
+
+		@include transition(all 350ms);
+
+		h4{
+			color: $white_color;
+		}
+
+		p{
+			color: $white_color;
+			font-size: 0.9em;
+		}
+	}
+}
+
+.portfolio > figure:hover figcaption{
+	@include translateX(0%);
+}
+
+/* Footer Section */
+.footer{
+	border-top: 1px solid $light_grey_color;
+	margin-top: 28px;
+	padding: 28px 0;
+}

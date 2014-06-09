@@ -25,8 +25,8 @@
 }
 
 @mixin transition_mix($transiMix1: all, $transiMix2: 350ms){
-	-webkit-transform: $transiMix1 $transiMix2;
-	-moz-transform: $transiMix1 $transiMix2;
-	-o-transform: $transiMix1 $transiMix2;
-	transform: $transiMix1 $transiMix2;
+	-webkit-transition: $transiMix1 $transiMix2;
+	-moz-transition: $transiMix1 $transiMix2;
+	-o-transition: $transiMix1 $transiMix2;
+	transition: $transiMix1 $transiMix2;
 }

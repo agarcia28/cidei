@@ -1,6 +1,12 @@
 $(document).ready(function(){
-	$('.error').hide();
-	$('.result').hide();
+	$('.errorn').hide();
+	$('.errore').hide();
+	$('.errorp').hide();
+	$('.errorpv').hide();
+	$('.errorc').hide();
+	$('.errorpa').hide();
+	$('.errorci').hide();
+	$('.resultc').hide();
 
 	$('.button').bind('click', function(event){
 		var name = $('.infoboxname').val();
@@ -19,9 +25,13 @@ $(document).ready(function(){
 			$('.errorn').show();
 			$('.errorn').text('El nombre esta muy largo');
 		}
-		if(!valid_email(data)){
+		if(!valid_email(email)){
 			$('.errore').show();
 			$('.errore').text('El correo no es valido');
+		}
+		else if(email.length < 1){
+			$('.errore').show();
+			$('.errore').text('Debe ingresar un correo');
 		}
 		if(pass1 !== pass2){
 			$('.errorp').show();
@@ -37,10 +47,10 @@ $(document).ready(function(){
 		}
 		else if(food !== 0){
 			$('.errorc').hide();
-			var total= 0
+			var total = 0;
 			$('.infoboxf:checked').each(function(){
-				total = total + $('.infoboxf:checked').val();
-				//console.log('$('.infoboxf:checked').val()');
+				total = total + parseInt($(this).val());
+				console.log(total);
 			});
 			$('.resultc').show();
 			$('.resultc').text('Su total es: ' + total);
@@ -52,19 +62,6 @@ $(document).ready(function(){
 		if(city === '0'){
 			$('.errorci').show();
 			$('.errorci').text('Debe seleccionar una ciudad');
-		}
-
-		var data = $('.infobox').val();
-		if(valid_email(data)){
-			$('.error').hide();
-			localStorage.setItem('email', data);
-			$('.result').show();
-			$('.result').html('<h1>El valor del correo electronico es: ' + localStorage.getItem('email') + '</h1>');
-		}
-		else{
-			$('.result').hide();
-			$('.error').show();
-			$('.error').html('<h1>Ingrese una direccion de correo valida</h1>')
 		}
 		
 		event.preventDefault();

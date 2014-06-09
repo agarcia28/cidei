@@ -66,3 +66,151 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
+
+/* Globales */
+/* line 12, ../sass/screen.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 16, ../sass/screen.scss */
+h1, h2, h3, h4, h5, h6 {
+  color: #333333;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+/* Header */
+/* line 24, ../sass/screen.scss */
+.header {
+  background-color: #3a3f43;
+  border-bottom: 14px;
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  padding: 22px 0;
+}
+
+/* line 31, ../sass/screen.scss */
+.logo {
+  background-color: #515558;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  margin: 0 auto;
+  padding: 5px 0;
+  text-align: center;
+  width: 250px;
+}
+/* line 39, ../sass/screen.scss */
+.logo h1 {
+  color: white;
+  font-weight: normal;
+  font-family: Arial, sans-serif;
+  margin-bottom: 0;
+}
+
+/* Navigation */
+/* line 51, ../sass/screen.scss */
+.nav-menu, .portfolio > figure.columns {
+  display: none;
+}
+
+/* line 55, ../sass/screen.scss */
+label {
+  color: #3a3f43;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px;
+}
+
+/* line 62, ../sass/screen.scss */
+.nav-menu:checked + label {
+  color: white;
+  background-color: #3a3f43;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* line 72, ../sass/screen.scss */
+#all:checked ~ .portfolio .all,
+#develop:checked ~ .portfolio .poster,
+#test:checked ~ .portfolio .illustration,
+#languages:checked ~ .portfolio .typography,
+#skills:checked ~ .portfolio .package {
+  display: block;
+}
+
+/* Portfolio */
+/* line 77, ../sass/screen.scss */
+.portfolio {
+  margin-top: 20px;
+}
+/* line 80, ../sass/screen.scss */
+.portfolio .four.columns {
+  margin-left: 0;
+  margin-right: 0;
+  width: 240px;
+}
+/* line 86, ../sass/screen.scss */
+.portfolio > figure {
+  position: relative;
+  overflow: hidden;
+}
+/* line 90, ../sass/screen.scss */
+.portfolio > figure img {
+  display: block;
+  max-width: 100%;
+}
+/* line 96, ../sass/screen.scss */
+.portfolio figcaption {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #3a3f43;
+  padding: 10%;
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-transition: all 350ms;
+  -moz-transition: all 350ms;
+  -o-transition: all 350ms;
+  transition: all 350ms;
+}
+/* line 109, ../sass/screen.scss */
+.portfolio figcaption h4 {
+  color: white;
+}
+/* line 113, ../sass/screen.scss */
+.portfolio figcaption p {
+  color: white;
+  font-size: 0.9em;
+}
+
+/* line 120, ../sass/screen.scss */
+.portfolio > figure:hover figcaption {
+  -webkit-transform: translateX(0%);
+  -moz-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  -o-transform: translateX(0%);
+  transform: translateX(0%);
+}
+
+/* Footer Section */
+/* line 125, ../sass/screen.scss */
+.footer {
+  border-top: 1px solid #cccccc;
+  margin-top: 28px;
+  padding: 28px 0;
+}

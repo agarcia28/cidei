@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	localStorage.clear();
 	function Validate(){};
 
 	Validate.prototype = {
@@ -11,6 +12,7 @@ $(document).ready(function(){
 			return pattern.test(uid);
 		}
 	}
+
 
 	$('#nid').focus(function(){
 		$(this).addClass('inputs');
@@ -76,13 +78,13 @@ $(document).ready(function(){
 	$('#buttons #info').remove();
 
 	$('.button').bind('click', function(event){
-
-		if($('a#info')){
+		
+		if ($('#info')){
+			$('#openModal > div').empty();
 			$('#info').remove();
-			console.log('Hola');
-		}
-		else{
-			console.log('Chaoooo');
+			console.log("Si Existe Info");
+		}else{
+			console.log("No Existe Info");
 		}
 
 		var validate = new Validate();
@@ -234,10 +236,11 @@ $(document).ready(function(){
 			$('.city-success').text('Ciudad Valida');
 			localStorage.setItem('city', count);
 
-			
 			$('#buttons').append(
-				'<a id="info" href="#openModal">Ver Detalle del Pedido</a>'
+				'<a id="info" href="#openModal"> Ver detalle del Pedido</a>' 
 			);
+			
+			//$('#info').show();
 
 			$('.inputs').removeClass('error');
 			$('.inputs').addClass('success');
@@ -246,7 +249,7 @@ $(document).ready(function(){
 	});
 
 	$(document).on('click', '#info', function(){
-		$('#openModal > div').empty();
+		//$('#openModal > div').empty();
 
 		$('#openModal > div').append(
 			'<h2Detalle del Pedido</h2>' +
@@ -257,7 +260,8 @@ $(document).ready(function(){
 			'<li id="listMeals">Los ALimentos Solicitados son: ' + '<ul></ul></li>' +
 			'<li>El Modo de Pago es: ' + localStorage.getItem('paymode') + '</li>' +
 			'<li>La Ciudad Donde Vive es: ' + localStorage.getItem('city') + '</li></ul>' +
-			'<div><a href="#close" title="Close" class="close">X</a></div>'
+			'<div><a href="#close" title="Close" class="close">X</a></div>' +
+			'<!--a id="info" href="#openModal"> Ver detalle del Pedido</a-->'
 			);
 
 		var meals = JSON.parse(localStorage.getItem('meals'));
