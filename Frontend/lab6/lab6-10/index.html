@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="css/styles.css" />
+		<script type="text/javascript" src="../assets/js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="js/lab6-10.js"></script>
+	</head>
+	<body>
+		<form action="">
+			<fildset>
+				<div>
+					<span class="label">Ingrese su nombre y su apellido</span>
+					<input type="text" class="infoboxname" name="nombre" placeholder="Nombre Completo" />
+					<p class="errorn"></p>
+				</div>
+				<div>
+					<span class="label">Ingrese su email</span>
+					<input type="text" class="infoboxemail" name="email" placeholder="Email" />
+					<p class="errore"></p>
+				</div>
+				<div>
+					<span class="label">Ingrese su password</span>
+					<input type="password" class="infoboxpass1" name="password" placeholder="Password" />
+					<p class="errorpv"></p>
+				</div>
+				<div>
+					<span class="label">Ingrese su password</span>
+					<input type="password" class="infoboxpass2" name="confpass" placeholder="Confirme Password" />
+					<p class="errorp"></p>
+				</div>
+				<div>
+					<span class="label">Seleccione el tipo de comida</span>
+					<input type="checkbox" id="pizza" name="pizza" value=5000 class="infoboxf">Pizza $5000 <br />
+					<input type="checkbox" id="cocacola" name="cocacola" value=2000 class="infoboxf">Coca-Cola $2000 <br />
+					<input type="checkbox" id="hotdog" name="hotdog" value=3000 class="infoboxf">HotDog $3000 <br />
+					<input type="checkbox" id="papas" name="papas" value=3000 class="infoboxf">Papas Fritas $3000 <br /> 
+					<p class="errorc"></p>
+					<p class="resultc"></p>
+				</div>
+				<div>
+					<span class="label">Seleccione el tipo de pago</span>
+					<input type="radio" name="paymode" class="infoboxpay" value="Mastercard" />Master card <br />
+					<input type="radio" name="paymode" class="infoboxpay" value="ANXcard" />ANX card <br />
+					<input type="radio" name="paymode" class="infoboxpay" value="Visacard" />Visa card <br />
+					<p class="errorpa"></p>
+				</div>
+				<div>
+					<span class="label">Seleccione su ciudad</span>
+					<select name="city" id="city" class="infoboxcity" >
+						<option value="0">Seleccione algun item</option>
+						<option value="Bogota">Bogota</option>
+						<option value="Medellin">Medellin</option>
+						<option value="Cali">Cali</option>
+						<option value="Barranquilla">Barranquilla</option>
+					</select>
+					<p class="errorci"></p>
+				</div>
+				<p class="error"></p>
+				<p class="result"></p>
+				<button class="button">Enviar</button>
+			</fildset>
+		</form>
+	</body>
+</html>
