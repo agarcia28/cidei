@@ -19,5 +19,4 @@ def sol_cuadratic(**kwargs):
 
 	print "X1 es: %f y X2 es %f" % (x_1, x_2)
 
-kwargs = {'a' : -1, 'b' : 4, 'c' : -3}
-sol_cuadratic(**kwargs)
+sol_cuadratic(a = -1, b = 4, c = -3)
