@@ -1,5 +1,5 @@
 class AddressBook(object):
-	# constructor para clases en Python
+	""" constructor para clases en Python """
 	def __init__(self):
 		self._data_store = []
 
