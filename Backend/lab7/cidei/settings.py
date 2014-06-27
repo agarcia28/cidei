@@ -1,5 +1,5 @@
 """
-Django settings for lab3 project.
+Django settings for cidei project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.6/topics/settings/
@@ -17,7 +17,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '__=l)uq5^ob6ho+ih6f%k)ohq*!8deg-a2z6j#uczz!kdw%2z$'
+SECRET_KEY = 'j#ks(&jkzm_2aok^1)j+jzn%eq712mcn-qx_%2&hvcee4o*l=r'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,7 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'autofixture',
-    'list',
+    'app',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -49,9 +49,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'lab3.urls'
+ROOT_URLCONF = 'cidei.urls'
 
-WSGI_APPLICATION = 'lab3.wsgi.application'
+WSGI_APPLICATION = 'cidei.wsgi.application'
 
 
 # Database
@@ -82,3 +82,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+TEMPLATE_PATH = os.path.join(BASE_DIR, 'templates')
+
+TEMPLATE_DIRS = (
+    TEMPLATE_PATH,
+)
