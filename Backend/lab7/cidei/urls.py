@@ -12,8 +12,9 @@ urlpatterns = patterns('',
     url(r'^$', 'app.views.index', name='index'),
     url(r'^items/$', 'app.views.items', name='items'),
     url(r'^items/(?P<item_id>\d+)/$', 'app.views.item_details', name='item-details'),
+    url(r'^items/add', 'app.views.add_item', name='add-items'),
     url(r'^categories/$', 'app.views.categories', name='categories'),
     url(r'^categories/(?P<slug>[\w-]+)/$', 'app.views.category_details', name='category-details'),
-    url(r'^category/add', 'app.views.add_item', name='add-categories')
+    #url(r'^category/add', 'app.views.add_category', name='add-categories'),
     url(r'^about/$', 'app.views.about', name='about'),
 )
